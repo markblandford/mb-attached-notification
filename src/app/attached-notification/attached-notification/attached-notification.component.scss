@@ -1,0 +1,80 @@
+$color-bg: DarkBlue;
+$color-txt: White;
+
+.attached-notification {
+  background-color: $color-bg;
+  color: $color-txt;
+  max-width: calc(100vw - 2rem);
+  min-height: 12rem;
+  padding: 1rem;
+  width: 18rem;
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+
+  &__title {
+    margin: auto 0;
+  }
+
+  &__title-text {
+    color: $color-txt;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    margin: 0 .75rem 0 0;
+  }
+
+  &__close-button {
+    background-color: transparent;
+    border: none;
+    color: $color-txt;
+    cursor: pointer;
+    font-size: 1.3rem;
+    line-height: 1;
+    padding: 0;
+  }
+
+  &__anchor-point {
+    border-style: solid;
+    height: 0;
+    opacity: 1;
+    position: absolute;
+    transition: opacity 0.3s;
+    width: 0;
+
+    &--top {
+      border-color: transparent transparent $color-bg transparent;
+      border-width: 0 0.6rem 0.6rem;
+      top: -0.55rem;
+    }
+
+    &--bottom {
+      border-color: $color-bg transparent transparent transparent;
+      border-width: 0.6rem 0.6rem 0;
+      bottom: -0.55rem;
+    }
+  }
+
+  &__body {
+    color: $color-txt;
+    padding-top: 0.25rem;
+
+    p {
+      color: $color-txt;
+      margin-top: 0;
+    }
+
+    #attached-notification-btn {
+      background-color: $color-bg;
+      border: 1px solid $color-txt;
+      color: $color-txt;
+      font-weight: 500;
+      margin: 1rem 0 0;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+    }
+  }
+}

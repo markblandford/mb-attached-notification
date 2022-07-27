@@ -1,0 +1,27 @@
+<ng-container>
+  <div class="attached-notification-anchor">
+    <button
+      (click)="onClick()"
+      class="attached-notification-anchor__button"
+      type="button"
+      title="View notification"
+      aria-label="View notification"
+    >
+      <span class="attached-notification-anchor__icon">
+        <ng-content select="i"></ng-content>
+      </span>
+      <span
+        #dot
+        class="attached-notification-anchor__dot"
+      ></span>
+    </button>
+  </div>
+</ng-container>
+
+<ng-template appAttachedNotificationTemplate>
+  <app-attached-notification [title]="title">
+    <ng-container ngProjectAs="[body]">
+      <ng-content select="[notificationBody]"></ng-content>
+    </ng-container>
+  </app-attached-notification>
+</ng-template>

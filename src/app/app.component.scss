@@ -1,0 +1,19 @@
+.app-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  //padding: 15rem 20rem;
+
+  .spacer {
+    margin: 50vh 50vw;
+  }
+
+  .spacer--smaller {
+    margin: 2rem;
+  }
+
+  .gg-arrow-up-o {
+    --ggs: 2;
+  }
+}
